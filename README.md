@@ -151,12 +151,6 @@ This project demonstrates:
 - Case-insensitive string matching
 - Working with lists and dictionaries in Python
 
-
-
-## 📝 License
-
-This project is open source and available under the MIT License.
-
 ## 👤 Author
 
 **Chirag**
