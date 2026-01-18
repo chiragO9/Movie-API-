@@ -2,7 +2,7 @@
 
 A RESTful API built with FastAPI for managing a movie collection. Features complete CRUD operations, advanced filtering, search functionality, and proper error handling.
 
-## 📸 Screenshots
+## Screenshots
 
 ### Interactive API Documentation
 ![API Documentation](images/2_get_requests.png)
