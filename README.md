@@ -12,13 +12,9 @@ A RESTful API built with FastAPI for managing a movie collection. Features compl
 - Get all movies or filter by specific criteria
 - Search across multiple fields (title, director) 
 
-## 🛠️ Technologies
+## Technologies
 
 - Python 3.8+
 - FastAPI
 - Uvicorn
 
-## 📦 Installation
-
-1. Clone the repository
-```bash
