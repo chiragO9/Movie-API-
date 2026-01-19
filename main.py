@@ -16,7 +16,7 @@ MOVIES = [
 ]
 
 @app.get('/')
-async def movie_api_first_page():
+async def root():
   return "Welcome to the Movie API"
 
 @app.get('/movies')
@@ -30,11 +30,16 @@ async def read_movie(movie_title : str):
       return movie
   return {"Error" :f"{movie_title}  Movie not found"}
 
-
 @app.get('/movies/byDirector/')
 async def read_movie_by_director(director : str):
-  movies_to_return = []
-  for movie in MOVIES:
-    if movie.get('director').casefold() == director.casefold():
-      movies_to_return.append(movie)
-  return movies_to_return
+    movies_to_return = []
+    
+    for movie in MOVIES:
+        if movie.get('director', '').casefold() == director.casefold():
+            movies_to_return.append(movie)
+    
+  
+    if not movies_to_return:
+        return {"Error": f"No movies found for director '{director}'"}
+    
+    return movies_to_return
