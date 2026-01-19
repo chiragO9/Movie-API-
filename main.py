@@ -37,9 +37,22 @@ async def read_movie_by_director(director : str):
     for movie in MOVIES:
         if movie.get('director', '').casefold() == director.casefold():
             movies_to_return.append(movie)
-    
   
     if not movies_to_return:
         return {"Error": f"No movies found for director '{director}'"}
+    
+    return movies_to_return
+
+
+@app.get('/movies/byGenre/')  
+async def read_movies_by_genre(genre: str):
+    movies_to_return = []
+    
+    for movie in MOVIES:
+        if movie.get('genre', '').casefold() == genre.casefold():
+            movies_to_return.append(movie)
+    
+    if not movies_to_return:
+        return {"Error": f"No movies found for genre '{genre}'"}
     
     return movies_to_return
